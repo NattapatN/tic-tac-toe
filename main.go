@@ -4,9 +4,11 @@ import (
 	"fmt"
 
 	"github.com/NattapatN/tic-tac-toe/handler"
+	"github.com/common-nighthawk/go-figure"
 )
 
 func main() {
-	fmt.Println("Tic-Tac-Toe game starting...")
+	figure.NewFigure("Tic-Tac-Toe", "rectangles", true).Print()
+	fmt.Println("Type 'exit' to exit game")
 	handler.Handler()
 }

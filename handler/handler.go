@@ -48,7 +48,7 @@ func Handler() {
 		fmt.Println("Game is end.")
 	} else {
 		var isWantToTryAgain string
-		fmt.Print("Do you want to try again [y,N]: ")
+		board.PrintPlayAgainCoversation()
 		fmt.Scan(&isWantToTryAgain)
 		if isWantToTryAgain == "y" {
 			Handler()

@@ -25,3 +25,13 @@ func PrintBoard(board [3][3]string) {
 		fmt.Println()
 	}
 }
+
+func PrintPlayAgainCoversation() {
+	whilte := color.New(color.FgWhite)
+	boldWhite := whilte.Add(color.Underline)
+	fmt.Print("Do you want to try again [")
+	boldWhite.Print("y")
+	fmt.Print("es/")
+	boldWhite.Print("N")
+	fmt.Print("o]: ")
+}
