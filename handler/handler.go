@@ -26,7 +26,7 @@ func Handler() {
 				fmt.Println("---------------------------------------------")
 				gameIsEnd = true
 			} else if game.CheckDue(&gameBoard) {
-				fmt.Printf("Game %v is Due. 🤝\n", currentPlayer)
+				fmt.Println("Game is Due. 🤝")
 				fmt.Println("---------------------------------------------")
 				gameIsEnd = true
 			}

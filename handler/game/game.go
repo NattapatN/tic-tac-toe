@@ -28,5 +28,5 @@ func CheckDue(gameBoard *[3][3]string) bool {
 			}
 		}
 	}
-	return false
+	return true
 }
