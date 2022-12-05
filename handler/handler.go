@@ -3,6 +3,7 @@ package handler
 import (
 	"fmt"
 
+	"github.com/NattapatN/tic-tac-toe/handler/ai"
 	"github.com/NattapatN/tic-tac-toe/handler/board"
 	"github.com/NattapatN/tic-tac-toe/handler/game"
 	"github.com/NattapatN/tic-tac-toe/handler/player"
@@ -15,8 +16,13 @@ func Handler() {
 	isExit := false
 	currentPlayer := 1
 	for !gameIsEnd && !isExit {
-		var playerInput bool
-		playerInput = player.PlayerInput(currentPlayer, &gameBoard)
+		playerInput := true
+		if currentPlayer == 1 {
+			playerInput = player.PlayerInput(currentPlayer, &gameBoard)
+		} else {
+			location := ai.AiFillTable(gameBoard)
+			board.FillBoard(player.GetPlayerValue(currentPlayer), location, &gameBoard)
+		}
 		if !playerInput {
 			isExit = true
 		} else {
