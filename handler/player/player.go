@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/NattapatN/tic-tac-teo/handler/board"
+	"github.com/NattapatN/tic-tac-toe/handler/board"
 )
 
 func PlayerInput(player int, gameBoard *[3][3]string) bool {

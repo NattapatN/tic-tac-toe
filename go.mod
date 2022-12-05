@@ -1,4 +1,4 @@
-module github.com/NattapatN/tic-tac-teo
+module github.com/NattapatN/tic-tac-toe
 
 go 1.19
 
